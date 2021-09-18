@@ -15,6 +15,7 @@ object GetRevenuePerOrder {
       map(oi => (oi.split(",")(1).toInt, oi.split(",")(4).toFloat)).
       reduceByKey(_ + _).
       map(oi => oi._1 + "," + oi._2)
+    print("testttttt")
 
     revenuePerOrder.saveAsTextFile(args(2))
   }
